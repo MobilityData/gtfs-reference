@@ -10,26 +10,6 @@ permalink: /reference/
 
 This document explains the types of files that comprise a GTFS transit feed and defines the fields used in all of those files.
 
-## Table of Contents
-
-1.  [Term Definitions](#term-definitions)
-2.  [Feed Files](#feed-files)
-3.  [File Requirements](#file-requirements)
-4.  [Field Definitions](#field-definitions)
-    -   [agency.txt](#agencytxt)
-    -   [stops.txt](#stopstxt)
-    -   [routes.txt](#routestxt)
-    -   [trips.txt](#tripstxt)
-    -   [stop\_times.txt](#stop_timestxt)
-    -   [calendar.txt](#calendartxt)
-    -   [calendar\_dates.txt](#calendar_datestxt)
-    -   [fare\_attributes.txt](#fare_attributestxt)
-    -   [fare\_rules.txt](#fare_rulestxt)
-    -   [shapes.txt](#shapestxt)
-    -   [frequencies.txt](#frequenciestxt)
-    -   [transfers.txt](#transferstxt)
-    -   [feed\_info.txt](#feed_infotxt)
-
 ## Term Definitions
 
 This section defines terms that are used throughout this document.
