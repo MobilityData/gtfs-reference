@@ -1,9 +1,5 @@
 ---
-layout: reference
-permalink: /reference/
-
 ---
-
 ## General Transit Feed Specification Reference
 
 **Revised August 4, 2016. See [Revision History](https://github.com/google/transit/blob/master/gtfs/CHANGES.md) for more details.**
@@ -55,19 +51,3 @@ The following example demonstrates how a field value would appear in a comma-del
 * Each line must end with a CRLF or LF linebreak character.
 * Files should be encoded in UTF-8 to support all Unicode characters. Files that include the Unicode byte-order mark (BOM) character are acceptable. Please see the [Unicode FAQ](http://unicode.org/faq/utf_bom.html#BOM) for more information on the BOM character and UTF-8.
 * Zip the files in your feed.
-
-## Field Definitions
-
-{{ site.reference | where: "slug", "agency" }}
-{{ site.reference | where: "slug", "stops" }}
-{{ site.reference | where: "slug", "routes" }}
-{{ site.reference | where: "slug", "trips" }}
-{{ site.reference | where: "slug", "stop_times" }}
-{{ site.reference | where: "slug", "calendar" }}
-{{ site.reference | where: "slug", "calendar_dates" }}
-{{ site.reference | where: "slug", "fare_attributes" }}
-{{ site.reference | where: "slug", "fare_rules" }}
-{{ site.reference | where: "slug", "shapes" }}
-{{ site.reference | where: "slug", "frequencies" }}
-{{ site.reference | where: "slug", "transfers" }}
-{{ site.reference | where: "slug", "feed_info" }}
