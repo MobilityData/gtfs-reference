@@ -1,6 +1,6 @@
 ---
 ---
-## General Transit Feed Specification Reference
+# General Transit Feed Specification Reference
 
 **Revised August 4, 2016. See [Revision History](https://github.com/google/transit/blob/master/gtfs/CHANGES.md) for more details.**
 
