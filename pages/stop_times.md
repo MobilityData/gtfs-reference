@@ -5,7 +5,8 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **trip_id** field contains an ID that identifies a trip. This value is referenced from the [trips.txt](#tripstxt) file.
+        text: |
+          The **trip_id** field contains an ID that identifies a trip. This value is referenced from the [trips.txt](#tripstxt) file.
   - field_name: arrival_time
     details:
       - ID: 2
@@ -49,19 +50,22 @@ table_data:
       - ID: 4
         required: true
         tags: []
-        text: The **stop_id** field contains an ID that uniquely identifies a stop. Multiple routes may use the same stop. The **stop_id** is referenced from the [stops.txt](#stopstxt) file. If **location_type** is used in [stops.txt](#stopstxt), all stops referenced in [stop_times.txt](#stop_timestxt) must have **location_type** of 0.  Where possible, **stop_id** values should remain consistent between feed updates. In other words, stop A with **stop_id 1** should have **stop_id 1** in all subsequent data updates. If a stop is not a time point, enter blank values for **arrival_time** and **departure_time**.
+        text: |
+          The **stop_id** field contains an ID that uniquely identifies a stop. Multiple routes may use the same stop. The **stop_id** is referenced from the [stops.txt](#stopstxt) file. If **location_type** is used in [stops.txt](#stopstxt), all stops referenced in [stop_times.txt](#stop_timestxt) must have **location_type** of 0.  Where possible, **stop_id** values should remain consistent between feed updates. In other words, stop A with **stop_id 1** should have **stop_id 1** in all subsequent data updates. If a stop is not a time point, enter blank values for **arrival_time** and **departure_time**.
   - field_name: stop_sequence
     details:
       - ID: 5
         required: true
         tags: []
-        text: The **stop_sequence** field identifies the order of the stops for a particular trip. The values for **stop_sequence** must be non-negative integers, and they must increase along the trip.  For example, the first stop on the trip could have a **stop_sequence** of 1, the second stop on the trip could have a **stop_sequence** of 23, the third stop could have a **stop_sequence** of 40, and so on.
+        text: |
+          The **stop_sequence** field identifies the order of the stops for a particular trip. The values for **stop_sequence** must be non-negative integers, and they must increase along the trip.  For example, the first stop on the trip could have a **stop_sequence** of 1, the second stop on the trip could have a **stop_sequence** of 23, the third stop could have a **stop_sequence** of 40, and so on.
   - field_name: stop_headsign
     details:
       - ID: 6
         required: false
         tags: []
-        text: The **stop_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to override the default **trip_headsign** when the headsign changes between stops. If this headsign is associated with an entire trip, use **trip_headsign** instead.
+        text: |
+          The **stop_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to override the default **trip_headsign** when the headsign changes between stops. If this headsign is associated with an entire trip, use **trip_headsign** instead.
   - field_name: pickup_type
     details:
       - ID: 7
@@ -113,23 +117,25 @@ table_data:
 ---
 File: **Required**
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Required</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Required</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for detail in field.details %}
-    <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
-      <td>{{ detail.text | markdownify }}{{ detail.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

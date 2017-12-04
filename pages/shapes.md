@@ -5,7 +5,8 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **shape_id** field contains an ID that uniquely identifies a shape.
+        text: |
+          The **shape_id** field contains an ID that uniquely identifies a shape.
   - field_name: shape_pt_lat
     details:
       - ID: 2
@@ -64,23 +65,25 @@ File: **Optional**
 
 Shapes describe the physical path that a vehicle takes, and are defined in the file shapes.txt. Shapes belong to Trips, and consist of a sequence of points. Tracing the points in order provides the path of the vehicle. The points do not need to match stop locations.
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Required</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Required</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for detail in field.details %}
-    <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
-      <td>{{ detail.text | markdownify }}{{ detail.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

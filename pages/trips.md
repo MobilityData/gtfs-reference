@@ -5,31 +5,36 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](#routestxt) file.
+        text: |
+          The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](#routestxt) file.
   - field_name: service_id
     details:
       - ID: 2
         required: true
         tags: []
-        text: The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. This value is referenced from the [calendar.txt](#calendartxt) or [calendar_dates.txt](#calendar_datestxt) file.
+        text: |
+          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. This value is referenced from the [calendar.txt](#calendartxt) or [calendar_dates.txt](#calendar_datestxt) file.
   - field_name: trip_id
     details:
       - ID: 3
         required: true
         tags: []
-        text: The **trip_id** field contains an ID that identifies a trip. The **trip_id** is dataset unique.
+        text: |
+          The **trip_id** field contains an ID that identifies a trip. The **trip_id** is dataset unique.
   - field_name: trip_headsign
     details:
       - ID: 4
         required: false
         tags: []
-        text: The **trip_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to distinguish between different patterns of service in the same route. If the headsign changes during a trip, you can override the **trip_headsign** by specifying values for the **stop_headsign** field in [stop_times.txt](#stop_timestxt).
+        text: |
+          The **trip_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to distinguish between different patterns of service in the same route. If the headsign changes during a trip, you can override the **trip_headsign** by specifying values for the **stop_headsign** field in [stop_times.txt](#stop_timestxt).
   - field_name: trip_short_name
     details:
       - ID: 5
         required: false
         tags: []
-        text: The **trip_short_name** field contains the text that appears in schedules and sign boards to identify the trip to passengers, for example, to identify train numbers for commuter rail trips. If riders do not commonly rely on trip names, please leave this field blank.  A **trip_short_name** value, if provided, should uniquely identify a trip within a service day; it should not be used for destination names or limited/express designations.
+        text: |
+          The **trip_short_name** field contains the text that appears in schedules and sign boards to identify the trip to passengers, for example, to identify train numbers for commuter rail trips. If riders do not commonly rely on trip names, please leave this field blank.  A **trip_short_name** value, if provided, should uniquely identify a trip within a service day; it should not be used for destination names or limited/express designations.
   - field_name: direction_id
     details:
       - ID: 6
@@ -51,13 +56,15 @@ table_data:
       - ID: 7
         required: false
         tags: []
-        text: The **block_id** field identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made using the same vehicle, defined by shared service day and block_id. A block_id can have trips with different service days, making distinct blocks. (See [example below](#example-showing-blocks-and-service-day))
+        text: |
+          The **block_id** field identifies the block to which the trip belongs. A block consists of a single trip or many sequential trips made using the same vehicle, defined by shared service day and block_id. A block_id can have trips with different service days, making distinct blocks. (See [example below](#example-showing-blocks-and-service-day))
   - field_name: shape_id
     details:
       - ID: 8
         required: false
         tags: []
-        text: The **shape_id** field contains an ID that defines a shape for the trip. This value is referenced from the [shapes.txt](#shapestxt) file. The shapes.txt file allows you to define how a line should be drawn on the map to represent a trip.
+        text: |
+          The **shape_id** field contains an ID that defines a shape for the trip. This value is referenced from the [shapes.txt](#shapestxt) file. The shapes.txt file allows you to define how a line should be drawn on the map to represent a trip.
   - field_name: wheelchair_accessible
     details:
       - ID: 9
@@ -79,26 +86,28 @@ table_data:
 ---
 File: **Required**
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Required</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Required</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for detail in field.details %}
-    <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
-      <td>{{ detail.text | markdownify }}{{ detail.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
 
 #### Example showing blocks and service day
 

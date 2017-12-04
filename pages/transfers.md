@@ -5,13 +5,15 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **from_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes begins. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
+        text: |
+          The **from_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes begins. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
   - field_name: to_stop_id
     details:
       - ID: 2
         required: true
         tags: []
-        text: The **to_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes ends. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
+        text: |
+          The **to_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes ends. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
   - field_name: transfer_type
     details:
       - ID: 3
@@ -38,23 +40,25 @@ File: **Optional**
 
 Trip planners normally calculate transfer points based on the relative proximity of stops in each route. For potentially ambiguous stop pairs, or transfers where you want to specify a particular choice, use transfers.txt to define additional rules for making connections between routes.
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Required</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Required</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for detail in field.details %}
-    <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
-      <td>{{ detail.text | markdownify }}{{ detail.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>

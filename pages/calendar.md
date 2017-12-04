@@ -5,7 +5,8 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the [trips.txt](#tripstxt) file.
+        text: |
+          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the [trips.txt](#tripstxt) file.
   - field_name: monday
     details:
       - ID: 1
@@ -95,33 +96,37 @@ table_data:
       - ID: 1
         required: true
         tags: []
-        text: The **start_date** field contains the start date for the service. The **start_date** field's value should be in YYYYMMDD format.
+        text: |
+          The **start_date** field contains the start date for the service. The **start_date** field's value should be in YYYYMMDD format.
   - field_name: end_date
     details:
       - ID: 1
         required: true
         tags: []
-        text: The **end_date** field contains the end date for the service. This date is included in the service interval. The **end_date** field's value should be in YYYYMMDD format.
+        text: |
+          The **end_date** field contains the end date for the service. This date is included in the service interval. The **end_date** field's value should be in YYYYMMDD format.
 ---
 File: **Required**
 
-<table class="recommendation">
-  <thead>
-    <tr>
-      <th>Field Name</th>
-      <th>Required</th>
-      <th>Details</th>
-    </tr>
-  </thead>
-  <tbody>
+<div class="table-wrapper">
+  <table class="recommendation">
+    <thead>
+      <tr>
+        <th>Field Name</th>
+        <th>Required</th>
+        <th>Details</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for field in page.table_data %}
       {% for detail in field.details %}
-    <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
-      <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-      <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
-      <td>{{ detail.text | markdownify }}{{ detail.example_table }}</td>
-    </tr>
+      <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
+        <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
+        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
+      </tr>
       {% endfor %}
     {% endfor %}
-  </tbody>
-</table>
+    </tbody>
+  </table>
+</div>
