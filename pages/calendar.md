@@ -6,10 +6,10 @@ table_data:
         required: true
         tags: []
         text: |
-          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the [trips.txt](#tripstxt) file.
+          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. Each service_id value can appear at most once in a calendar.txt file. This value is dataset unique. It is referenced by the [trips.txt](#trips) file.
   - field_name: monday
     details:
-      - ID: 1
+      - ID: 2
         required: true
         tags: []
         text: |
@@ -18,10 +18,10 @@ table_data:
           * A value of **1** indicates that service is available for all Mondays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Mondays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: tuesday
     details:
-      - ID: 1
+      - ID: 3
         required: true
         tags: []
         text: |
@@ -30,10 +30,10 @@ table_data:
           * A value of **1** indicates that service is available for all Tuesdays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Tuesdays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: wednesday
     details:
-      - ID: 1
+      - ID: 4
         required: true
         tags: []
         text: |
@@ -42,10 +42,10 @@ table_data:
           * A value of **1** indicates that service is available for all Wednesdays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Wednesdays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: thursday
     details:
-      - ID: 1
+      - ID: 5
         required: true
         tags: []
         text: |
@@ -54,10 +54,10 @@ table_data:
           * A value of **1** indicates that service is available for all Thursdays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Thursdays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: friday
     details:
-      - ID: 1
+      - ID: 6
         required: true
         tags: []
         text: |
@@ -66,10 +66,10 @@ table_data:
           * A value of **1** indicates that service is available for all Fridays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Fridays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: saturday
     details:
-      - ID: 1
+      - ID: 7
         required: true
         tags: []
         text: |
@@ -78,10 +78,10 @@ table_data:
           * A value of **1** indicates that service is available for all Saturdays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Saturdays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: sunday
     details:
-      - ID: 1
+      - ID: 8
         required: true
         tags: []
         text: |
@@ -90,17 +90,17 @@ table_data:
           * A value of **1** indicates that service is available for all Sundays in the date range. (The date range is specified using the **start_date** and **end_date** fields.)
           * A value of **0** indicates that service is not available on Sundays in the date range.
 
-          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_datestxt) file.
+          **Note:** You may list exceptions for particular dates, such as holidays, in the [calendar_dates.txt](#calendar_dates) file.
   - field_name: start_date
     details:
-      - ID: 1
+      - ID: 9
         required: true
         tags: []
         text: |
           The **start_date** field contains the start date for the service. The **start_date** field's value should be in YYYYMMDD format.
   - field_name: end_date
     details:
-      - ID: 1
+      - ID: 10
         required: true
         tags: []
         text: |

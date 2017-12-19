@@ -54,7 +54,7 @@ table_data:
         text: |
           When used in the shapes.txt file, the **shape_dist_traveled** field positions a shape point as a distance traveled along a shape from the first shape point. The **shape_dist_traveled** field represents a real distance traveled along the route in units such as feet or kilometers. This information allows the trip planner to determine how much of the shape to draw when showing part of a trip on the map. The values used for **shape_dist_traveled** must increase along with shape_pt_sequence: they cannot be used to show reverse travel along a route.
 
-          The units used for **shape_dist_traveled** in the shapes.txt file must match the units that are used for this field in the [stop_times.txt](#stop_timestxt) file.
+          The units used for **shape_dist_traveled** in the shapes.txt file must match the units that are used for this field in the [stop_times.txt](#stop_times) file.
           For example, if a bus travels along the three points defined above for A_shp, the additional **shape_dist_traveled** values (shown here in kilometers) would look like this:
 
           | `A_shp,37.61956,-122.48161,0,0` |

@@ -6,14 +6,14 @@ table_data:
         required: true
         tags: []
         text: |
-          The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](#routestxt) file.
+          The **route_id** field contains an ID that uniquely identifies a route. This value is referenced from the [routes.txt](#routes) file.
   - field_name: service_id
     details:
       - ID: 2
         required: true
         tags: []
         text: |
-          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. This value is referenced from the [calendar.txt](#calendartxt) or [calendar_dates.txt](#calendar_datestxt) file.
+          The **service_id** contains an ID that uniquely identifies a set of dates when service is available for one or more routes. This value is referenced from the [calendar.txt](#calendar) or [calendar_dates.txt](#calendar_dates) file.
   - field_name: trip_id
     details:
       - ID: 3
@@ -27,7 +27,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **trip_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to distinguish between different patterns of service in the same route. If the headsign changes during a trip, you can override the **trip_headsign** by specifying values for the **stop_headsign** field in [stop_times.txt](#stop_timestxt).
+          The **trip_headsign** field contains the text that appears on a sign that identifies the trip's destination to passengers. Use this field to distinguish between different patterns of service in the same route. If the headsign changes during a trip, you can override the **trip_headsign** by specifying values for the **stop_headsign** field in [stop_times.txt](#stop_times).
   - field_name: trip_short_name
     details:
       - ID: 5
@@ -46,7 +46,7 @@ table_data:
           * 0 - travel in one direction (e.g. outbound travel)
           * 1 - travel in the opposite direction (e.g. inbound travel)
 
-          For example, you could use the *trip_headsign* and *direction_id* fields together to assign a name to travel in each direction for a set of trips. A [trips.txt](#tripstxt) file could contain these rows for use in time tables:
+          For example, you could use the *trip_headsign* and *direction_id* fields together to assign a name to travel in each direction for a set of trips. A [trips.txt](#trips) file could contain these rows for use in time tables:
 
           * `trip_id,...,trip_headsign,direction_id`
           * `1234,...,Airport,0`
@@ -64,7 +64,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **shape_id** field contains an ID that defines a shape for the trip. This value is referenced from the [shapes.txt](#shapestxt) file. The shapes.txt file allows you to define how a line should be drawn on the map to represent a trip.
+          The **shape_id** field contains an ID that defines a shape for the trip. This value is referenced from the [shapes.txt](#shapes) file. The shapes.txt file allows you to define how a line should be drawn on the map to represent a trip.
   - field_name: wheelchair_accessible
     details:
       - ID: 9

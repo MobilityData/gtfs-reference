@@ -6,14 +6,14 @@ table_data:
         required: true
         tags: []
         text: |
-          The **fare_id** field contains an ID that uniquely identifies a fare class. This value is referenced from the [fare_attributes.txt](#fare_attributestxt) file.
+          The **fare_id** field contains an ID that uniquely identifies a fare class. This value is referenced from the [fare_attributes.txt](#fare_attributes) file.
   - field_name: route_id
     details:
       - ID: 2
         required: false
         tags: []
         text: |
-          The **route_id** field associates the fare ID with a route. Route IDs are referenced from the [routes.txt](#routestxt) file. If you have several routes with the same fare attributes, create a row in fare_rules.txt for each route.
+          The **route_id** field associates the fare ID with a route. Route IDs are referenced from the [routes.txt](#routes) file. If you have several routes with the same fare attributes, create a row in fare_rules.txt for each route.
 
           For example, if fare class "b" is valid on route "TSW" and "TSE", the fare_rules.txt file would contain these rows for the fare class:
 
@@ -25,7 +25,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **origin_id** field associates the fare ID with an origin zone ID. Zone IDs are referenced from the [stops.txt](#stopstxt) file. If you have several origin IDs with the same fare attributes, create a row in fare_rules.txt for each origin ID.
+          The **origin_id** field associates the fare ID with an origin zone ID. Zone IDs are referenced from the [stops.txt](#stops) file. If you have several origin IDs with the same fare attributes, create a row in fare_rules.txt for each origin ID.
 
           For example, if fare class "b" is valid for all travel originating from either zone "2" or zone "8", the fare_rules.txt file would contain these rows for the fare class:
 
@@ -37,7 +37,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **destination_id** field associates the fare ID with a destination zone ID. Zone IDs are referenced from the [stops.txt](#stopstxt) file. If you have several destination IDs with the same fare attributes, create a row in fare_rules.txt for each destination ID.
+          The **destination_id** field associates the fare ID with a destination zone ID. Zone IDs are referenced from the [stops.txt](#stops) file. If you have several destination IDs with the same fare attributes, create a row in fare_rules.txt for each destination ID.
 
           For example, you could use the origin_ID and destination_ID fields together to specify that fare class "b" is valid for travel between zones 3 and 4, and for travel between zones 3 and 5, the fare_rules.txt file would contain these rows for the fare class:
 
@@ -49,7 +49,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **contains_id** field associates the fare ID with a zone ID, referenced from the [stops.txt](#stopstxt) file. The fare ID is then associated with itineraries that pass through every contains_id zone.
+          The **contains_id** field associates the fare ID with a zone ID, referenced from the [stops.txt](#stops) file. The fare ID is then associated with itineraries that pass through every contains_id zone.
 
           For example, if fare class "c" is associated with all travel on the GRT route that passes through zones 5, 6, and 7 the fare_rules.txt would contain these rows:
 

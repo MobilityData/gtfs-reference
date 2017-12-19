@@ -6,7 +6,7 @@ table_data:
         required: true
         tags: []
         text: |
-          The **service_id** contains an ID that uniquely identifies a set of dates when a service exception is available for one or more routes. Each (service_id, date) pair can only appear once in calendar_dates.txt. If the a service_id value appears in both the calendar.txt and calendar_dates.txt files, the information in calendar_dates.txt modifies the service information specified in [calendar.txt](#calendartxt). This field is referenced by the [trips.txt](#tripstxt) file.
+          The **service_id** contains an ID that uniquely identifies a set of dates when a service exception is available for one or more routes. Each (service_id, date) pair can only appear once in calendar_dates.txt. If the a service_id value appears in both the calendar.txt and calendar_dates.txt files, the information in calendar_dates.txt modifies the service information specified in [calendar.txt](#calendar). This field is referenced by the [trips.txt](#trips) file.
   - field_name: date
     details:
       - ID: 2
@@ -31,8 +31,8 @@ File: **Optional**
 
 The calendar_dates table allows you to explicitly activate or disable service IDs by date. You can use it in two ways.
 
-* Recommended: Use calendar_dates.txt in conjunction with [calendar.txt](#calendartxt), where calendar_dates.txt defines any exceptions to the default service categories defined in the [calendar.txt](#calendartxt) file. If your service is generally regular, with a few changes on explicit dates (for example, to accommodate special event services, or a school schedule), this is a good approach.
-* Alternate: Omit [calendar.txt](#calendartxt), and include ALL dates of service in calendar_dates.txt. If your schedule varies most days of the month, or you want to programmatically output service dates without specifying a normal weekly schedule, this approach may be preferable.
+* Recommended: Use calendar_dates.txt in conjunction with [calendar.txt](#calendar), where calendar_dates.txt defines any exceptions to the default service categories defined in the [calendar.txt](#calendar) file. If your service is generally regular, with a few changes on explicit dates (for example, to accommodate special event services, or a school schedule), this is a good approach.
+* Alternate: Omit [calendar.txt](#calendar), and include ALL dates of service in calendar_dates.txt. If your schedule varies most days of the month, or you want to programmatically output service dates without specifying a normal weekly schedule, this approach may be preferable.
 
 <div class="table-wrapper">
   <table class="recommendation">

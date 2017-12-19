@@ -6,7 +6,7 @@ table_data:
         required: true
         tags: []
         text: |
-          The **trip_id** field contains an ID that identifies a trip. This value is referenced from the [trips.txt](#tripstxt) file.
+          The **trip_id** field contains an ID that identifies a trip. This value is referenced from the [trips.txt](#trips) file.
   - field_name: arrival_time
     details:
       - ID: 2
@@ -51,7 +51,7 @@ table_data:
         required: true
         tags: []
         text: |
-          The **stop_id** field contains an ID that uniquely identifies a stop. Multiple routes may use the same stop. The **stop_id** is referenced from the [stops.txt](#stopstxt) file. If **location_type** is used in [stops.txt](#stopstxt), all stops referenced in [stop_times.txt](#stop_timestxt) must have **location_type** of 0.  Where possible, **stop_id** values should remain consistent between feed updates. In other words, stop A with **stop_id 1** should have **stop_id 1** in all subsequent data updates. If a stop is not a time point, enter blank values for **arrival_time** and **departure_time**.
+          The **stop_id** field contains an ID that uniquely identifies a stop. Multiple routes may use the same stop. The **stop_id** is referenced from the [stops.txt](#stops) file. If **location_type** is used in [stops.txt](#stops), all stops referenced in [stop_times.txt](#stop_times) must have **location_type** of 0.  Where possible, **stop_id** values should remain consistent between feed updates. In other words, stop A with **stop_id 1** should have **stop_id 1** in all subsequent data updates. If a stop is not a time point, enter blank values for **arrival_time** and **departure_time**.
   - field_name: stop_sequence
     details:
       - ID: 5
@@ -100,7 +100,7 @@ table_data:
         required: false
         tags: []
         text: |
-          When used in the [stop_times.txt](#stop_timestxt) file, the **shape_dist_traveled** field positions a stop as a distance from the first shape point. The **shape_dist_traveled** field represents a real distance traveled along the route in units such as feet or kilometers. For example, if a bus travels a distance of 5.25 kilometers from the start of the shape to the stop, the **shape_dist_traveled** for the stop ID would be entered as "5.25". This information allows the trip planner to determine how much of the shape to draw when showing part of a trip on the map. The values used for **shape_dist_traveled** must increase along with **stop_sequence**: they cannot be used to show reverse travel along a route.  The units used for **shape_dist_traveled** in the [stop_times.txt](#stop_timestxt) file must match the units that are used for this field in the shapes.txt file.
+          When used in the [stop_times.txt](#stop_times) file, the **shape_dist_traveled** field positions a stop as a distance from the first shape point. The **shape_dist_traveled** field represents a real distance traveled along the route in units such as feet or kilometers. For example, if a bus travels a distance of 5.25 kilometers from the start of the shape to the stop, the **shape_dist_traveled** for the stop ID would be entered as "5.25". This information allows the trip planner to determine how much of the shape to draw when showing part of a trip on the map. The values used for **shape_dist_traveled** must increase along with **stop_sequence**: they cannot be used to show reverse travel along a route.  The units used for **shape_dist_traveled** in the [stop_times.txt](#stop_times) file must match the units that are used for this field in the shapes.txt file.
   - field_name: timepoint
     details:
       - ID: 10

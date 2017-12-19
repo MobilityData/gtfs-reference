@@ -20,19 +20,19 @@ This specification defines the following files along with their associated conte
 
 |  Filename | Required | Defines |
 |  ------ | ------ | ------ |
-|  [agency.txt](#agencytxt) | **Required** | One or more transit agencies that provide the data in this feed. |
-|  [stops.txt](#stopstxt) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
-|  [routes.txt](#routestxt) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
-|  [trips.txt](#tripstxt)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at specific time. |
-|  [stop_times.txt](#stop_timestxt)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
-|  [calendar.txt](#calendartxt)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
-|  [calendar_dates.txt](#calendar_datestxt)  | Optional | Exceptions for the service IDs defined in the [calendar.txt](#calendartxt) file. If [calendar.txt](#calendartxt) includes ALL dates of service, this file may be specified instead of [calendar.txt](#calendartxt). |
-|  [fare_attributes.txt](#fare_attributestxt)  | Optional | Fare information for a transit organization's routes. |
-|  [fare_rules.txt](#fare_rulestxt)  | Optional | Rules for applying fare information for a transit organization's routes. |
-|  [shapes.txt](#shapestxt)  | Optional | Rules for drawing lines on a map to represent a transit organization's routes. |
-|  [frequencies.txt](#frequenciestxt)  | Optional | Headway (time between trips) for routes with variable frequency of service. |
-|  [transfers.txt](#transferstxt)  | Optional | Rules for making connections at transfer points between routes. |
-|  [feed_info.txt](#feed_infotxt)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
+|  [agency.txt](#agency) | **Required** | One or more transit agencies that provide the data in this feed. |
+|  [stops.txt](#stops) | **Required** | Individual locations where vehicles pick up or drop off passengers. |
+|  [routes.txt](#routes) | **Required** | Transit routes. A route is a group of trips that are displayed to riders as a single service. |
+|  [trips.txt](#trips)  | **Required** | Trips for each route. A trip is a sequence of two or more stops that occurs at specific time. |
+|  [stop_times.txt](#stop_times)  | **Required** | Times that a vehicle arrives at and departs from individual stops for each trip. |
+|  [calendar.txt](#calendar)  | **Required** | Dates for service IDs using a weekly schedule. Specify when service starts and ends, as well as days of the week where service is available. |
+|  [calendar_dates.txt](#calendar_dates)  | Optional | Exceptions for the service IDs defined in the [calendar.txt](#calendar) file. If [calendar.txt](#calendar) includes ALL dates of service, this file may be specified instead of [calendar.txt](#calendar). |
+|  [fare_attributes.txt](#fare_attributes)  | Optional | Fare information for a transit organization's routes. |
+|  [fare_rules.txt](#fare_rules)  | Optional | Rules for applying fare information for a transit organization's routes. |
+|  [shapes.txt](#shapes)  | Optional | Rules for drawing lines on a map to represent a transit organization's routes. |
+|  [frequencies.txt](#frequencies)  | Optional | Headway (time between trips) for routes with variable frequency of service. |
+|  [transfers.txt](#transfers)  | Optional | Rules for making connections at transfer points between routes. |
+|  [feed_info.txt](#feed_info)  | Optional | Additional information about the feed itself, including publisher, version, and expiration information. |
 
 ## File Requirements
 

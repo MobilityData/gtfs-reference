@@ -6,7 +6,7 @@ table_data:
         required: true
         tags: []
         text: |
-          The **trip_id** contains an ID that identifies a trip on which the specified frequency of service applies. Trip IDs are referenced from the [trips.txt](#tripstxt) file.
+          The **trip_id** contains an ID that identifies a trip on which the specified frequency of service applies. Trip IDs are referenced from the [trips.txt](#trips) file.
   - field_name: start_time
     details:
       - ID: 2
@@ -48,7 +48,7 @@ table_data:
 ---
 File: **Optional**
 
-This table is intended to represent schedules that don't have a fixed list of stop times. When trips are defined in frequencies.txt, the trip planner ignores the absolute values of the **arrival_time** and **departure_time** fields for those trips in [stop_times.txt](#stop_timestxt). Instead, the **stop_times** table defines the sequence of stops and the time difference between each stop.
+This table is intended to represent schedules that don't have a fixed list of stop times. When trips are defined in frequencies.txt, the trip planner ignores the absolute values of the **arrival_time** and **departure_time** fields for those trips in [stop_times.txt](#stop_times). Instead, the **stop_times** table defines the sequence of stops and the time difference between each stop.
 
 <div class="table-wrapper">
   <table class="recommendation">

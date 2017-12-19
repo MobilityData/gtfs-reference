@@ -13,7 +13,7 @@ table_data:
         required: false
         tags: []
         text: |
-          The **agency_id** field defines an agency for the specified route. This value is referenced from the [agency.txt](#agencytxt) file. Use this field when you are providing data for routes from more than one agency.
+          The **agency_id** field defines an agency for the specified route. This value is referenced from the [agency.txt](#agency) file. Use this field when you are providing data for routes from more than one agency.
   - field_name: route_short_name
     details:
       - ID: 3

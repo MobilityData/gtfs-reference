@@ -6,14 +6,14 @@ table_data:
         required: true
         tags: []
         text: |
-          The **from_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes begins. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
+          The **from_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes begins. Stop IDs are referenced from the [stops.txt](#stops) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
   - field_name: to_stop_id
     details:
       - ID: 2
         required: true
         tags: []
         text: |
-          The **to_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes ends. Stop IDs are referenced from the [stops.txt](#stopstxt) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
+          The **to_stop_id** field contains a stop ID that identifies a stop or station where a connection between routes ends. Stop IDs are referenced from the [stops.txt](#stops) file. If the stop ID refers to a station that contains multiple stops, this transfer rule applies to all stops in that station.
   - field_name: transfer_type
     details:
       - ID: 3
