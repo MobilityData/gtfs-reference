@@ -1,4 +1,6 @@
 ---
+lang: es
+
 table_data:
   - field_name: feed_publisher_name
     details:

@@ -1,4 +1,6 @@
 ---
+lang: de
+
 ---
 # General Transit Feed Specification Reference
 

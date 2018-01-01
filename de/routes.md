@@ -1,4 +1,6 @@
 ---
+lang: de
+
 table_data:
   - field_name: route_id
     details:

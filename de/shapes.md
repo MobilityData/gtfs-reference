@@ -1,4 +1,6 @@
 ---
+lang: de
+
 table_data:
   - field_name: shape_id
     details:

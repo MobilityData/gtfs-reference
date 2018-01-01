@@ -1,4 +1,6 @@
 ---
+lang: fr
+
 table_data:
   - field_name: agency_id
     details:
