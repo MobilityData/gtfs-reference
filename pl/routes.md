@@ -15,7 +15,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **agency_id** linii zawiera identyfikator placówki odpowiedzialnej za rozkłady linii, zgodnie z pliku [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jedna placówka.
+          Pole **agency_id** linii zawiera identyfikator placówki odpowiedzialnej za rozkłady linii, zgodnie z plikiem [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jedna placówka.
   - field_name: route_short_name
     details:
       - ID: 3
