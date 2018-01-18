@@ -59,7 +59,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **block_id** zawiera blok do którego należy dany kurs. Blok zawiera jeden lub więcej kursów wykonywanych przez ten sam pojazd, tak, że pasażer może się przesiąść pomiędzy tymi kursami pozostając w pojeździe, definiowanych przez identyfiaktor kalendarza i block_id. Block_id może łączyć kursy z różnymi kalendarzami, tworząc różne bloki w różne dni. (Zobacz [przykład poniżej](#example-showing-blocks-and-service-day))
+          Pole **block_id** zawiera blok do którego należy dany kurs. Blok zawiera jeden lub więcej kursów wykonywanych przez ten sam pojazd, tak, że pasażer może się przesiąść pomiędzy tymi kursami pozostając w pojeździe, jeśli oba kursy są aktywne w dany dzień. Block_id może łączyć kursy z różnymi kalendarzami, tworząc różne bloki w różne dni. (Zobacz [przykład poniżej](#example-showing-blocks-and-service-day))
   - field_name: shape_id
     details:
       - ID: 8
