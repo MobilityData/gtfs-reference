@@ -13,7 +13,7 @@ Ten dokument wyjaśnia typy plików, które składają się na format GTFS oraz 
 Ta sekcja definiuje zwroty, które będą używane w całym dokumencie.
 
 * **Pole wymagane** - Ta kolumna musi być zawarta w pliku GTFS, oraz każdy wpis musi mieć zdefiniowaną wartość. Niektóre wymagane kolumny akcjeptują pusty tekst jako wartość, aby to wprowadzić pomiń jakikolwiek tekst między przecinakami (`,,`). Uważaj, np. wartość 0 będzie interpretowana jako „tekst o treści «0»”. Zobacz definicje pól po więcej szczegółów.
-* **Pole opcjolane** - Ta kolumna nie musi być zawarta w pliku GTFS, ale jeśli jest ona zdefiniowana, każdy wpis musi mieć zdefiniowaną wartość. Niektóre wymagane kolumny akcjeptują pusty tekst jako wartość, aby to wprowadzić pomiń jakikolwiek tekst między przecinakami (`,,`). Uważaj, np. wartość 0 będzie interpretowana jako „tekst o treści «0»”.
+* **Pole opcjolane** - Ta kolumna nie musi być zawarta w pliku GTFS, ale jeśli jest ona zdefiniowana, każdy wpis musi mieć zdefiniowaną wartość. Niektóre wymagane kolumny akcjeptują pusty tekst jako wartość, aby to wprowadzić pomiń jakikolwiek tekst między przecinakami (`,,`). Uważaj, np. wartość 0 będzie interpretowana jako „tekst o treści »0«”.
 * **Unikatowe w skali pliku** - To pole zawiera wartość, która jest przyporządkowana do tylko jednego wpisu. Dla przykładu, jeśli identyfikator **1A** zostanie przyporządkowany jakieś linii, to żadna inna linia nie może użyć tego idenytfikatora; Natomiast identyfikator **1A** może zostać przypisany przystankowi, gdyż przystanki są innymi obiekatmi od linii.
 
 ## Pliki w Archiwum

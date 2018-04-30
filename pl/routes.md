@@ -15,7 +15,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **agency_id** linii zawiera identyfikator placówki odpowiedzialnej za rozkłady linii, zgodnie z plikiem [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jedna placówka.
+          Pole **agency_id** linii zawiera identyfikator podmiotu odpowiedzialnego za linie, zgodnie z plikiem [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jeden podmiot/spółka.
   - field_name: route_short_name
     details:
       - ID: 3
@@ -29,7 +29,7 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **route_long_name** zawiera pełną nazwę linii. Nazwa ta jest generalnie bardziej opisowa od *route_short_name* i zazwyczaj zawiera informacje o krańcach linii. Pole to nie powinno zawierać krótkiej nazwy. Przynajmniej jedna z kolumn *route_short_name* lub *route_long_name* musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić *route_short_name* i użyć pustego tekstu w tej kolumnie.
+          Pole **route_long_name** zawiera pełną nazwę linii. Nazwa ta jest generalnie bardziej opisowa od *route_short_name* i zazwyczaj zawiera informacje o krańcach linii, np. "Młociny — Kabaty", "Dworzec PKP — Osiedle Sobieskiego". Pole to nie powinno zawierać krótkiej nazwy. Przynajmniej jedna z kolumn *route_short_name* lub *route_long_name* musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić *route_short_name* i użyć pustego tekstu w tej kolumnie.
   - field_name: route_desc
     details:
       - ID: 5
@@ -59,7 +59,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **route_url** adres URL strony, gdzie można znaleźć dodatkowe informacje o linii. Powinno być różne od *agency_url*. Pole musi być poprawnym adresem URL który zawiera **http**:// lub **https**://, a wszelkie znaki specjalne powinny być odpowiednio zakodowane. Zobacz http://www.w3.org/Addressing/URL/4_URI_Recommentations.html dla pełnego opisu jak stworzyć poprawny adres URL.
+          Pole **route_url** adres URL strony, gdzie można znaleźć dodatkowe informacje o linii. Powinno być różne od *agency_url*. Pole musi być poprawnym adresem URL który zawiera **http://** lub **https://**, a wszelkie znaki specjalne powinny być odpowiednio zakodowane. Zobacz http://www.w3.org/Addressing/URL/4_URI_Recommentations.html dla pełnego opisu jak stworzyć poprawny adres URL.
   - field_name: route_color
     details:
       - ID: 8
