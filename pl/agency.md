@@ -17,7 +17,7 @@ table_data:
         text: |
           Pole **agency_name** zawiera pełną nazwę podmiotu odpowiedzialnego za rozkłady. Mapy Google będą wyświetlały tę nazwę.
 
-          Uwaga! W przypadku organizatorów transportu publicznego, gdzie linie są operowane przez różne spółki, w pliku agency.txt operatorzy poszczególnych linii **nie powinni** być wyszczególniani — tj. w pliku tym powinen znajdować się **tylko organizator**: np. „ZTM Warszawa”, a nie ~~„MZA Warszawa”, „Tramwaje Warszawskie”, „Metro Warszawskie”, „SKM Warszawa”, „Mobilis”, „Arriva”, itd.~~.
+          Uwaga! W przypadku organizatorów transportu publicznego, gdzie linie są operowane przez różne spółki, w pliku agency.txt operatorzy poszczególnych linii **nie powinni** być wyszczególniani — tj. w pliku tym powinen znajdować się **tylko organizator**: np. „ZTM Warszawa”, a nie ~~„MZA Warszawa”, „Tramwaje Warszawskie”, „Metro Warszawskie”, „SKM Warszawa”, „Mobilis”, „Arriva”, itd.~~. Po więcej informacji zobacz: https://support.google.com/transitpartners/answer/6377427?ref_topic=6377359.
   - field_name: agency_url
     details:
       - ID: 3
