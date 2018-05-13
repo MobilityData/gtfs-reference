@@ -16,6 +16,8 @@ table_data:
         tags: []
         text: |
           Pole **agency_name** zawiera pełną nazwę podmiotu odpowiedzialnego za rozkłady. Mapy Google będą wyświetlały tę nazwę.
+
+          Uwaga! W przypadku organizatorów transportu publicznego, gdzie linie są operowane przez różne spółki, w pliku agency.txt operatorzy poszczególnych linii **nie powinni** być wyszczególniani — tj. w pliku tym powinen znajdować się **tylko organizator**: np. „ZTM Warszawa”, a nie ~~„MZA Warszawa”, „Tramwaje Warszawskie”, „Metro Warszawskie”, „SKM Warszawa”, „Mobilis”, „Arriva”, itd.~~.
   - field_name: agency_url
     details:
       - ID: 3
@@ -43,7 +45,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **agency_phone** zawiera numer telefonu do placówki. Pole jest tekstem prezentującym numer telefonu w sposób, jaki jest domyślny dla placówki. **agency_phone** może i powinno zawierać znaki interpunkcyjne w celu oddzielenia róznych grup cyfr. Wybieralny tekst (np. "503-238-RIDE" TriMetu) jest dozwolony, ale pole nie powinno zawierać żadnego dodatkowego opisu.
+          Pole **agency_phone** zawiera numer telefonu do podmiotu. Pole jest tekstem prezentującym numer telefonu w sposób, jaki jest domyślny dla regionu. **agency_phone** może i powinno zawierać znaki interpunkcyjne w celu oddzielenia róznych grup cyfr. Wybieralny tekst (np. "503-238-RIDE" TriMetu) jest dozwolony, ale pole nie powinno zawierać żadnego dodatkowego opisu.
   - field_name: agency_fare_url
     details:
       - ID: 7
@@ -57,7 +59,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **agency_email** definiuje pojedyńczy adres email aktywnie monitorowany przez biuro obsługi klienta placówki. Ten adres email jest traktowany jako bezpośredni punkt kontaktu z biurem obsługi klienta organizatora/spółki.
+          Pole **agency_email** definiuje pojedyńczy adres email aktywnie monitorowany przez biuro obsługi klienta podmiotu. Ten adres email jest traktowany jako bezpośredni punkt kontaktu z biurem obsługi klienta organizatora/spółki.
 ---
 Plik: **Wymagany**
 
