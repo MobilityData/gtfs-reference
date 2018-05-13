@@ -33,6 +33,7 @@ table_data:
 
           Zakresy częstosliwości (wiersze w pliku frequencies.txt) nie powinny nakładać się dla jednego trip_id, gdyż nie jest jasne jak interpretować nakładające się zakresy częstotliwości. Z drugiej strony, czas końca jednego zakresu może pokrywać się z czasem rozpoczęcia następnego:
 
+          | `trip_id,start_time,end_time,headway_secs` |
           | `A,05:00:00,07:00:00,600` |
           | `A,07:00:00,12:00:00,1200` |
   - field_name: exact_times
@@ -41,9 +42,9 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **exact_times** określa, czy kurs opisany za pomocą częstotliwości powinien być interpretowany jako ścisły odstęp między kursami, czy jako ogólna informacja o częstotliwości kursowania. Prawidłowe wartości dla tego pola to:
+          Pole **exact_times** określa, czy kurs opisany za pomocą częstotliwości powinien być interpretowany jako ścisły odstęp między kursami, czy jako ogólna informacja o częstotliwości kursowania. Pole to przyjumje następujące wartości:
 
-          * **0** lub **(puste pole)** - Częstotliwość stanowi ogólną informację dla podróżnych — Jest to domyślne zachowanie.
+          * **0** (lub puste) - Częstotliwość stanowi ogólną informację dla podróżnych — Jest to domyślne zachowanie.
           * **1** - Kursy opisane za pomocą częstotliwości mają ścisły odstęp między odjazdami. Dla wiersza w pliku frequencies.txt obliczany jest czas rozpoczęcia każdego kursu według schematu: czas_rozpoczecia_kursu = start_time + (headway_secs * n) dla każdej liczby naturalnej n (0, 1, 2, …) podczas gdy czas_rozpoczecia_kursu < end_time (ostro mniejsze!).
 
           Wartość **exact_times** powinna być taka sama dla każdego **trip_id**. Jeśli **exact_times**=1 i **start_time**==**end_time**, żaden kurs nie odbywa się w podanym zakresie (gdyż czas_rozpoczecia_kursu == end_time, a czas_rozpoczecia_kursu powinen być ostro mniejszy od **end_time**). Gdy **exact_times** przyjmuje wartość 1, trzeba zwrócić uwagę, aby **end_time** było większe niż czas rozpoczęcia ostatniego kursu oraz żeby nie zawierała odjazdu następnego, nieistniejącego, kursu.
@@ -66,7 +67,7 @@ Ta tabela używana jest w celu reprezenacji rozkładów bez ścisłej listy czas
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

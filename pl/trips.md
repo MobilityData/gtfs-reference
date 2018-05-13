@@ -36,19 +36,19 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **trip_short_name** definiuje krótki tekst, który pojawia się w rozkładach i na tablicach informacyjnych, np. numery pociągów. Jeśli taki system identyfikacji kursów nie jest powszechnie stosowany przez pasażerów, pozostaw to pole puste. Wartość pola **trip_short_name**, jeśli podana, powinna unikatowo identyfikować kurs w każdym dniu; nie powinna być stosowana dla tablic kierunkowych i/lub rozróżnienia kursów pospiesznych od zwykłych.
+          Pole **trip_short_name** definiuje krótki tekst identyfikujący kurs, który pojawia się w rozkładach i na tablicach informacyjnych, np. numery pociągów. Jeśli taki system identyfikacji kursów nie jest powszechnie stosowany przez pasażerów, pozostaw to pole puste. Wartość pola **trip_short_name**, jeśli podana, powinna unikatowo identyfikować kurs w każdym dniu; nie powinna być stosowana dla tablic kierunkowych i/lub rozróżnienia kursów pospiesznych od zwykłych.
   - field_name: direction_id
     details:
       - ID: 6
         required: false
         tags: []
         text: |
-          Pole **direction_id** definiuje binarną wartość pozwalającą określić kierunek kursu. Kolumna ta jest stosowana w celu rozróżnienia kursów w dwóch kierunkach, ale z tym samym **route_id**. Pole to nie jest stosowane w wytyczaniu trasy — ma wpływ jedynie przy publikowaniu rozkładów całej linii. Nazwy krańców mogą być zdefiniowane za pomocą kolumny **trip_headsign**.
+          Pole **direction_id** definiuje binarną wartość pozwalającą określić kierunek kursu. Kolumna ta jest stosowana w celu rozróżnienia kursów w dwóch kierunkach, ale z tym samym **route_id**. Pole to nie jest stosowane w wytyczaniu trasy — ma wpływ jedynie przy publikowaniu rozkładów całej linii. Nazwy krańców mogą być zdefiniowane za pomocą kolumny **trip_headsign**. Pole to przyjmuje następujące wartości:
 
-          * 0 - kursuje w jednym kierunku („tam”)
-          * 1 - kursuje w przeciwnym kierunku („z powrotem”)
+          * **0** - kursuje w jednym kierunku („tam”)
+          * **1** - kursuje w przeciwnym kierunku („z powrotem”)
 
-          Na przykład, możesz użyć kolumn *trip_headsign* i *direction_id* w celu przypisania nazwy do kierunku linii. Plik [trips.txt](#trips) może zawierać takie trzy wpisy:
+          Na przykład, możesz użyć kolumn **trip_headsign** i **direction_id** w celu przypisania nazwy do kierunku linii. Plik [trips.txt](#trips) może zawierać takie trzy wpisy:
 
           * `trip_id,...,trip_headsign,direction_id`
           * `1234,...,Lotnisko,0`
@@ -59,7 +59,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **block_id** zawiera blok do którego należy dany kurs. Blok zawiera jeden lub więcej kursów wykonywanych przez ten sam pojazd, tak, że pasażer może się przesiąść pomiędzy tymi kursami pozostając w pojeździe, jeśli oba kursy są aktywne w dany dzień. Block_id może łączyć kursy z różnymi kalendarzami, tworząc różne bloki w różne dni. (Zobacz [przykład poniżej](#example-showing-blocks-and-service-day))
+          Pole **block_id** zawiera blok do którego należy dany kurs. Blok zawiera jeden lub więcej kursów wykonywanych przez ten sam pojazd, tak, że pasażer może się przesiąść pomiędzy tymi kursami pozostając w pojeździe, jeśli oba kursy są aktywne w dany dzień. Block_id może łączyć kursy z różnymi kalendarzami, tworząc różne bloki w różne dni. (Zobacz [przykład poniżej](#przykład-kombinacji-kalendarzy-i-bloków))
   - field_name: shape_id
     details:
       - ID: 8

@@ -8,7 +8,7 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **shape_id** definiuje identyfikator kształt trasy przejazdu.
+          Pole **shape_id** definiuje identyfikator kształtu trasy przejazdu.
   - field_name: shape_pt_lat
     details:
       - ID: 2
@@ -57,7 +57,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Gdy użyta w pliku shapes.txt, kolumna **shape_dist_traveled** reprezentuke odległość punktu kształtu od pierwszego punktu kształtu. Pole **shape_dist_traveled** reprezentuje prawdziwy dystans od pierwszego punktu w stopach, kilometrach, lub innej dowolnej jednostce. Dla przykładu, jeśli pojazd od początku kształtu do jakiegoś punktu przemierza 5.25 kilometrów, pole **shape_dist_traveled** dla danego punktu mogłoby przyjmować wartość „5.25”. Ta informacja potrzebna jest planerom podróży aby móc określić jaką część kształtu narysować dla danego odcinku kształtu. Wartości pola **shape_dist_traveled** muszą zwiększać się wraz z wzrostem **shape_pt_sequence**; nie mogą zmniejszać się w przypadku kursów powrotnych. Wartości jednostek użytych w kolumnie **shape_dist_traveled** w pliku [stop_times.txt](#stop_times) muszą **dokładnie** odzwierciedlać jednostki użyte w pliku shapes.txt.
+          Gdy użyta w pliku shapes.txt, kolumna **shape_dist_traveled** reprezentuje odległość punktu kształtu od pierwszego punktu. Pole **shape_dist_traveled** reprezentuje prawdziwy dystans od pierwszego punktu w stopach, kilometrach, lub innej dowolnej jednostce. Dla przykładu, jeśli pojazd od początku kształtu do jakiegoś punktu przemierza 5.25 kilometrów, pole **shape_dist_traveled** dla danego punktu mogłoby przyjmować wartość „5.25”. Ta informacja potrzebna jest planerom podróży aby móc określić jaką część kształtu narysować dla danego odcinku kształtu. Wartości pola **shape_dist_traveled** muszą zwiększać się wraz z wzrostem **shape_pt_sequence**; nie mogą zmniejszać się w przypadku kursów powrotnych. Wartości jednostek użytych w kolumnie **shape_dist_traveled** w pliku [stop_times.txt](#stop_times) muszą **dokładnie** odzwierciedlać jednostki użyte w pliku shapes.txt.
 
           Na przykład, jeśli jakiś pojazd kursuje trasą kształtu „A->Lotnisko”, wartości dodatkowej kolumny **shape_dist_traveled** (tu w kilometrach) wyglądałyby następująco:
 
@@ -84,7 +84,7 @@ shapes.txt pozwala zdefiniować prawdziwą trasę przejazdu pojazdu na linii. Pr
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

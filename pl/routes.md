@@ -15,35 +15,35 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **agency_id** linii zawiera identyfikator podmiotu odpowiedzialnego za linie, zgodnie z plikiem [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jeden podmiot/spółka.
+          Pole **agency_id** linii zawiera identyfikator podmiotu odpowiedzialnego za linię, zgodnie z plikiem [agency.txt](#agency). Pole jest wymagane jeśli w pliku jest zdefiniowana więcej niż jeden podmiot/spółka.
   - field_name: route_short_name
     details:
       - ID: 3
         required: true
         tags: []
         text: |
-          Pole **route_short_name** zawiera krótką nazwę linii. Zazwyczaj to będzie krótki, abstrakcyjny identyfikator jak "32", "100X", "EIP" lub "Zielona". Dzięki krótkiej nazwie pasażer może zidentyfikować linie, ale nazwa ta nie daje informacji o celu linii. Przynajmniej jedna z kolumn *route_short_name* lub *route_long_name* musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić *route_long_name* i użyć pustego tekstu w tej kolumnie.
+          Pole **route_short_name** zawiera krótką nazwę linii. Zazwyczaj to będzie krótki, abstrakcyjny identyfikator jak "32", "100X", "EIP" lub "Zielona". Dzięki krótkiej nazwie pasażer może zidentyfikować linie, ale nazwa ta nie daje informacji o celu linii. Przynajmniej jedna z kolumn **route_short_name** lub **route_long_name** musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić **route_long_name** i użyć pustego tekstu w tej kolumnie.
   - field_name: route_long_name
     details:
       - ID: 4
         required: true
         tags: []
         text: |
-          Pole **route_long_name** zawiera pełną nazwę linii. Nazwa ta jest generalnie bardziej opisowa od *route_short_name* i zazwyczaj zawiera informacje o krańcach linii, np. "Młociny — Kabaty", "Dworzec PKP — Osiedle Sobieskiego". Pole to nie powinno zawierać krótkiej nazwy. Przynajmniej jedna z kolumn *route_short_name* lub *route_long_name* musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić *route_short_name* i użyć pustego tekstu w tej kolumnie.
+          Pole **route_long_name** zawiera pełną nazwę linii. Nazwa ta jest generalnie bardziej opisowa od **route_short_name** i zazwyczaj zawiera informacje o krańcach linii, np. „Młociny — Kabaty”, „Dworzec PKP — Osiedle Sobieskiego”. Pole to nie powinno zawierać krótkiej nazwy. Przynajmniej jedna z kolumn **route_short_name** lub **route_long_name** musi zostać zdefiniowana, jeśli możliwe — obie. Jeśli to pole nie może zostać zapełnione, proszę wypełnić **route_short_name** i użyć pustego tekstu w tej kolumnie.
   - field_name: route_desc
     details:
       - ID: 5
         required: false
         tags: []
         text: |
-          Pole **route_desc** zawiera opis trasy. Proszę podać opisowe, wysokiej jakości informacje, a nie duplikować nazwy linii. Na przykład: "Pociągi linii **A** operują między stacjami Ulica Inwood-207 (Manhattan) i Aleją Far Rockaway-Mott (Queens) 24 godziny na dobę. Dodatkowo, od około 6 rano do północy, dodatkowe składy linii **A** kursują między Ulicą Inwood-207 a Bulwarem Lefferta (typowo, pociągi kursują na zmianę do Bulwaru Leffereta i Aleją Far Rockaway-Mott)."
+          Pole **route_desc** zawiera opis trasy. Proszę podać opisowe, wysokiej jakości informacje, a nie duplikować nazwy linii. Na przykład: „Pociągi linii **A** operują między stacjami Ulica Inwood-207 (Manhattan) i Aleją Far Rockaway-Mott (Queens) 24 godziny na dobę. Dodatkowo, od około 6 rano do północy, dodatkowe składy linii **A** kursują między Ulicą Inwood-207 a Bulwarem Lefferta (typowo, pociągi kursują na zmianę do Bulwaru Leffereta i Aleją Far Rockaway-Mott).”
   - field_name: route_type
     details:
       - ID: 6
         required: true
         tags: []
         text: |
-          Pole **route_type** opsiuje typ taboru kursującej na danej linii komunikacyjnej. Prawidłowe wartości:
+          Pole **route_type** opsiuje typ taboru kursującej na danej linii komunikacyjnej. Pole to przyjmuje następujące wartości:
 
           * **0** - Tramwaj, Kolej Lekka. Jakakolwiek kolej lekka, lub w poziomie ulicy, wewnątrz aglomeracji.
           * **1** - Metro, Kolej Podziemna. Jakikolwiek wydzielony system kolei cechujący się wysoką częstotliowścią kursowania.
@@ -59,7 +59,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **route_url** adres URL strony, gdzie można znaleźć dodatkowe informacje o linii. Powinno być różne od *agency_url*. Pole musi być poprawnym adresem URL który zawiera **http://** lub **https://**, a wszelkie znaki specjalne powinny być odpowiednio zakodowane. Zobacz http://www.w3.org/Addressing/URL/4_URI_Recommentations.html dla pełnego opisu jak stworzyć poprawny adres URL.
+          Pole **route_url** adres URL strony, gdzie można znaleźć dodatkowe informacje o linii. Powinno być różne od **agency_url**. Pole musi być poprawnym adresem URL który zawiera **http://** lub **https://**, a wszelkie znaki specjalne powinny być odpowiednio zakodowane. Zobacz http://www.w3.org/Addressing/URL/4_URI_Recommentations.html dla pełnego opisu jak stworzyć poprawny adres URL.
   - field_name: route_color
     details:
       - ID: 8

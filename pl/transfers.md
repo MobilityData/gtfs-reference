@@ -22,7 +22,7 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **transfer_type** opisuje typ połączenia między parą przystanków (from_stop_id, to_stop_id). Pole to może przyjmować następujące wartości:
+          Pole **transfer_type** opisuje typ połączenia między parą przystanków (from_stop_id, to_stop_id). Pole to przyjmuje następujące wartości:
 
           * **0** (lub puste) - Para przystanków stanowi rekomendowane miejsce przesiadek
           * **1** - Para przystanków jest skomunikowana — pojazdy odjeżdżające będą oczekiwać na pojazdy odjeżdżające, tak, żeby przesiadka była zawsze możliwa
@@ -56,7 +56,7 @@ Planery podróży normalnie obliczają miejsca przesiadek na podstawie bliskośc
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

@@ -57,23 +57,23 @@ table_data:
         text: |
           Pole **contains_id** definiuje bilet jako „ważny tylko dla podróży wewnątrz jakiejś strefy”. Identyfikatory stref muszą być zgodne z plikiem [stops.txt](#stops). Jeśli bilet jest ważny dla podróży po kilku strfach, każda z nich musi mieć osobny wiersz.
 
-          Na przykład, jeśli bilet „e” jes ważny na linii „A” w strefach 5, 6 i 7, plik fare_rules.txt zawierałby następujące wiersze:
+          Na przykład, jeśli bilet „e” jest ważny na linii „A” w strefach 5, 6 i 7, plik fare_rules.txt zawierałby następujące wiersze:
 
           | `fare_id,route_id,origin_id,destination_id,contains_id` |
           | `e,A,,,5` |
           | `e,A,,,6` |
           | `e,A,,,7` |
 
-          Ponieważ wszytskie strefy wymienione w **contains_id** muszą należeć do podróży aby bilet był uznany za ważny na jakąś podróż, trasa linii A przejeżdżająca tylk przez strefy 5 i 6 **nie** miałaby nadanego biletu „e”. Po więcej przykładów modelowania systemów biletowych, zobacz artykuł [FareExamples](https://code.google.com/p/googletransitdatafeed/wiki/FareExamples) na wiki projektu GoogleTransitDataFeed.
+          Ponieważ wszytskie strefy wymienione w **contains_id** muszą należeć do podróży aby bilet był uznany za ważny na jakąś podróż, trasa linii A przejeżdżająca tylko przez strefy 5 i 6 **nie** miałaby nadanego biletu „e”. Po więcej przykładów modelowania systemów biletowych, zobacz artykuł [FareExamples](https://code.google.com/p/googletransitdatafeed/wiki/FareExamples) na wiki projektu GoogleTransitDataFeed.
 
 ---
 Plik: **Opcjonalny**
 
-Tabela fare_rules pozwala zdefiniować jak bilety z pliku in fare_attributes.txt mogą być wykorzystywane podczas podróży. Większość systemów trafyowych korzysta z jakieś kombinacji takich zasad:
+Tabela fare_rules pozwala zdefiniować jak bilety z pliku fare_attributes.txt mogą być wykorzystywane podczas podróży. Większość systemów trafyowych korzysta z jakieś kombinacji takich zasad:
 
-* Taryfa polega na stacjach początkowych i końcowych.
-* Taryfa polega na strefach, po których odbywa się podróż.
-* Taryfa zależna jest od linii po których odbywa się podróż.
+* Taryfa polega na stacjach początkowych i końcowych
+* Taryfa polega na strefach, po których odbywa się podróż
+* Taryfa zależna jest od linii po których odbywa się podróż
 
 Po więcej przykładów jak modelować trayfy biletowe w GTFSie za pomocą plików fare_rules.txt and fare_attributes.txt, zobacz stronę [FareExamples](https://code.google.com/p/googletransitdatafeed/wiki/FareExamples) na wiki projektu GoogleTransitDataFeed.
 
@@ -91,7 +91,7 @@ Po więcej przykładów jak modelować trayfy biletowe w GTFSie za pomocą plik�
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

@@ -15,84 +15,84 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **monday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdy poniedziałek.
+          Pole **monday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdy poniedziałek.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdy poniedziałek zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdy poniedziałek zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: tuesday
     details:
       - ID: 3
         required: true
         tags: []
         text: |
-          Pole **tuesday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdy wtorek.
+          Pole **tuesday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdy wtorek.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdy wtorek zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdy wtorek zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: wednesday
     details:
       - ID: 4
         required: true
         tags: []
         text: |
-          Pole **wednesday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdą środę.
+          Pole **wednesday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdą środę.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdą środę zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdą środę zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: thursday
     details:
       - ID: 5
         required: true
         tags: []
         text: |
-          Pole **thursday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdy czwartek.
+          Pole **thursday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdy czwartek.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdy czwartek zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdy czwartek zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: friday
     details:
       - ID: 6
         required: true
         tags: []
         text: |
-          Pole **friday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdy piątek.
+          Pole **friday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdy piątek.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdy piątek zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdy piątek zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: saturday
     details:
       - ID: 7
         required: true
         tags: []
         text: |
-          Pole **saturday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdą sobotę.
+          Pole **saturday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdą sobotę.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdą sobotę zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdą sobotę zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: sunday
     details:
       - ID: 8
         required: true
         tags: []
         text: |
-          Pole **sunday** zawiera wartość binarną informującą czy dany kalendarz jest aktywy w każdą niedzielę.
+          Pole **sunday** zawiera wartość binarną informującą czy dany kalendarz jest aktywny w każdą niedzielę.
 
           * Wartość **1** wskazuje, że dany kalendarz jest aktywny w każdą niedzielę zakresu. (Zakres dat jest definiowany za pomocą pól **start_date** i **end_date**.)
           * Wartość **0** wskazuje, że dany kalendarz nie jest aktywny w każdą niedzielę zakresu.
 
-          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definioawne w pliku [calendar_dates.txt](#calendar_dates).
+          **Uwaga:** Odstępstwa od standardowych schematów, takie jak święta, są definiowane w pliku [calendar_dates.txt](#calendar_dates).
   - field_name: start_date
     details:
       - ID: 9

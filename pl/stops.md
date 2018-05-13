@@ -64,13 +64,13 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **location_type** rozróżnia wpisy w pliku stops.txt na przystanki, stacje i wejścia do stacji. Jeśli kolumna **location_type** nie jest zdefiniowana, lub wartość tego pola jest pusta, ten wiersz będzie traktowany jak zwykły przystanek. Stacje mają inne właściwości od przystanków podczas wyświetlania w aplikacjach korzystających z formatu GTFS. To pole przyjmuje następujące wartości:
+          Pole **location_type** rozróżnia wpisy w pliku stops.txt na przystanki, stacje i wejścia do stacji. Jeśli kolumna **location_type** nie jest zdefiniowana, lub wartość tego pola jest pusta, ten wiersz będzie traktowany jak zwykły przystanek. Stacje mają inne właściwości od przystanków podczas wyświetlania w aplikacjach korzystających z formatu GTFS. Pole to przyjmujue następujące wartości:
 
           * **0** (lub puste) - Przystanek. Miejsce, gdzie pojazdy się zatrzymują, a pasażerowie mogą wsiąść/wysiąść.
           * **1** - Stacja. Fizyczna struktura lub obszar zawierający więcej niż jeden przystanek, które są postrzegane przez pasażerów jako jeden obiekt.
           * **2** - Wejście/Wyjście. Miejsce na poziomie ulicy, z którego pasażer może zejść/wejść na poziom z którego odbywają odjazdy. Taki wiersz musi również zawierać zdefiniowany **parent_station**.
 
-          Uwaga! Dwa przystanki naprzeciwko siebie nie tworzą „stacji” — zatem zespoły przystanków **nie powinny** być łączone za pomocą stacji-matki. W polskich realiach jedynie wieloperonowe stacje/przystanki kolejowe oraz dworce autobusowe powinny być łączone za pomocą stacji-matki. Po więcej informacji zobacz: https://support.google.com/transitpartners/answer/6377423?ref_topic=6377359
+          **Uwaga:** Dwa przystanki naprzeciwko siebie nie tworzą „stacji” — zatem zespoły przystanków **nie powinny** być łączone za pomocą stacji-matki. W polskich realiach jedynie wieloperonowe stacje/przystanki kolejowe oraz dworce autobusowe powinny być łączone za pomocą stacji-matki. Po więcej informacji zobacz: https://support.google.com/transitpartners/answer/6377423?ref_topic=6377359
   - field_name: parent_station
     details:
       - ID: 10
@@ -118,7 +118,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **wheelchair_boarding** informuje czy stacja/przystanek/wejście jest dostępne dla osób poruszających się na wózkach inwalidzkich. Ta kolumna przyjmuje następujące wartości:
+          Pole **wheelchair_boarding** informuje czy stacja/przystanek/wejście jest dostępne dla osób poruszających się na wózkach inwalidzkich. Pole to przyjmuje następujące wartości:
 
           * **0** (lub puste) - Nie ma informacji odnośnie dostępności danego przystanku
           * **1** - Przystanek jest dostępny dla osb poruszających się na wózkach
@@ -130,7 +130,7 @@ table_data:
           * **1** - Istnieje ścieżka dojścia do przystanku z poziomu ulicy dla osób niepoełnosprawnych
           * **2** - Osoby poruszające się na wózku nie mogą dostać się na przystanek z poziomu ulicy
 
-          Natomiast dla wejść/wyjść, pole **wheelchair_boarding** jest interpretowane następująco:
+          Natomiast dla wejść/wyjść, **wheelchair_boarding** jest interpretowane następująco:
 
           * **0** (lub puste) - Informacja o dostępności przystanku jest dziedziczona po polu **wheelchair_boarding** stacji-matki
           * **1** - Za pomocą tego wejścia osoby poruszające się na wózkach mogą dostać się do miejsca odjazdu pojazdów z poziomu ulicy, np. za pomocą wind.

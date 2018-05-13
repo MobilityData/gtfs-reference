@@ -36,7 +36,7 @@ table_data:
         text: |
           Pole **departure_time** zaweira czas odjazdu pojazdu z przystanku przez zdefiniowany kurs. Czas jest odliczany względem "południe minus 12 godzin" (generalnie północ, z wyjątkiem dni, w które następuje zmiana czasu letni↔zimowy) na początku dnia kalendarzowego. Dla odjazdów po północy (należących do poprzedniego dnia kalendarzowego) wartość będzie większa od 24:00:00; w formacie HH:MM:SS czasu liczonego od południa minus 12h dnia poprzedniego. Jeśli czas odjazdu i przyjazdu jest taki sam, pola **arrival_time** i **departure_time** powinny zawierać taką samą wartość.
 
-          Rozkładowe przystanki, gdzie pojazd ma ściśle ustalony czas przyjazdu i odjazdu, są nazywane „punktami czasowymi”. Na przykład, jeśli pojazd przyjeżdża na przystanek, zazwyczaj będzie oczekiwał z odjazdem do zdefiniowanego czasu. Jeśli przystanek nie jest punktem czasowym, albo użyj pustej wartości w polu **departure_time** lub użyj zinterpolowanych czasów. Dodatkowo wskaż, że przystanek nie jest punktem czasowym za pomocą kolumny **timepoint** i wartości 0. Jeśli czasy interpolowane są zankowane za pomocą **timepoint**=0, to przystanki z rozkładowymi czasami powinny zawierać wartość 1 w kolumnie **timepoint**. Czas odjazdu jest potrzebny w każdym wierszu, który oznacza punkt czasowy.
+          Rozkładowe przystanki, gdzie pojazd ma ściśle ustalony czas przyjazdu i odjazdu, są nazywane „punktami czasowymi”. Na przykład, jeśli pojazd przyjeżdża na przystanek, zazwyczaj będzie oczekiwał z odjazdem do zdefiniowanego czasu. Jeśli przystanek nie jest punktem czasowym, albo użyj pustej wartości w polu **departure_time** lub użyj zinterpolowanych czasów. Dodatkowo wskaż, że przystanek nie jest punktem czasowym za pomocą kolumny **timepoint** i wartości 0. Jeśli czasy interpolowane są zankowane za pomocą **timepoint=0**, to przystanki z rozkładowymi czasami powinny zawierać wartość 1 w kolumnie **timepoint**. Czas odjazdu jest potrzebny w każdym wierszu, który oznacza punkt czasowy.
 
           Czas odjazdu musi zostać podany przy pierwszym i ostatnim przystanku kursu. Czas jest definiowany za pomocą ośmiu cyfr w formacie HH:MM:SS (H:MM:SS jest też akceptowalne, jeśli godzina rozpoczyna się od 0). Nie podawaj żadnych dodatkowych zanków w polach, w szczególności dotyczy to spacji. Poniższa tabela pokazuje przykładowe czasy odjazdu pojazdu, wraz z pokazaną wartością w polu **departure_time**:
 
@@ -134,7 +134,7 @@ Plik: **Wymagany**
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

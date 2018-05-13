@@ -30,7 +30,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Plik GTFS zawiera kompletne i dokładne informacje rozkładowe na okres od **feed_start_date** do **feed_end_date** (włącznie). Oba pole powinny zawierac datę w formacie YYYYMMDD, tak jak w pliku [calendar.txt](#calendar). **feed_start_date** nie może być większy od **feed_end_date**. Producenci GTFSów są zachęcani do uzupełniania rozkładów poza zadanymi datami, ale aplikacje korzystające z GTFS nie powinny traktować takich danych jako pewnych. Jeśli **feed_start_date** lub **feed_end_date** nie pokrywają się z pierwszym/ostatnim dniem kursowania z plików [calendar.txt](#calendar)/[calendar_dates.txt](#calendar_dates), oznacza to, że w dniach w zakresach **feed_start_date** — „pierwszy dzień z aktywnym kalendarzem” i/lub „ostatni dzień z aktywnym kalendarzem” — **feed_end_date** nie ma żadnych aktywnych kursów.
+          Plik GTFS zawiera kompletne i dokładne informacje rozkładowe na okres od **feed_start_date** do **feed_end_date** (włącznie). Oba pole powinny zawierać datę w formacie YYYYMMDD, tak jak w pliku [calendar.txt](#calendar). **feed_start_date** nie może być większy od **feed_end_date**. Producenci GTFSów są zachęcani do uzupełniania rozkładów poza zadanymi datami, ale aplikacje korzystające z GTFS nie powinny traktować takich rozkładów jako pewnych. Jeśli **feed_start_date** lub **feed_end_date** nie pokrywają się z pierwszym/ostatnim dniem kursowania z plików [calendar.txt](#calendar)/[calendar_dates.txt](#calendar_dates), oznacza to, że w dniach w zakresach **feed_start_date** — „pierwszy dzień z aktywnym kalendarzem” i/lub „ostatni dzień z aktywnym kalendarzem” — **feed_end_date** nie ma żadnych aktywnych kursów.
   - field_name: feed_end_date
     details:
       - ID: 5
@@ -64,7 +64,7 @@ Ten plik zawiera informacje o samym GTFSie, a nie o rozkładach jazdy, które op
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}

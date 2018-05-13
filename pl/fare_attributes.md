@@ -29,7 +29,7 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **payment_method** definiuje sposób opłaty tego biletu. Pole przyjmuje następujące wartości:
+          Pole **payment_method** definiuje sposób opłaty tego biletu. Pole to przyjmuje następujące wartości:
 
           * **0** - Opłata jest pobierana w pojeździe (np. za pomocą skasowania biletu).
           * **1** - Przejazd jest opłacany z góry, np. bilet jest wydawany na konkrety odcinek konretnego kursu.
@@ -39,7 +39,7 @@ table_data:
         required: true
         tags: []
         text: |
-          Pole **transfers** definiuje możliwą liczbę przesiadek na podstawie danego biletu. Kolumna ta może przyjmować następujące wartości:
+          Pole **transfers** definiuje możliwą liczbę przesiadek na podstawie danego biletu. Pole to przyjmuje następujące wartości:
 
           * **0** - Na podstawie tego biletu pasażer nie może sie przesiadać
           * **1** - Pasażer może przesiąść się tylko raz
@@ -76,7 +76,7 @@ Plik: **Opcjonalny**
       {% for detail in field.details %}
       <tr id="{{ page.slug }}_{{ detail.ID }}" class="anchor-row{% if forloop.first %} field-row{% endif %}{% for tag in detail.tags %} {{ tag }}{% endfor %}">
         <td>{% if forloop.first %}<code>{{ field.field_name }}</code>{% endif %}</td>
-        <td>{% if detail.required %}Required{% else %}Optional{% endif %}</td>
+        <td>{% if detail.required %}Wymagane{% else %}Opcjonalne{% endif %}</td>
         <td>{{ detail.text | markdownify }}{% if detail.example_table %}<div class="table-wrapper">{{ detail.example_table }}</div>{% endif %}</td>
       </tr>
       {% endfor %}
