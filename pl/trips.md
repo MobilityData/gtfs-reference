@@ -66,7 +66,7 @@ table_data:
         required: false
         tags: []
         text: |
-          Pole **shape_id** zawiera unikalny identyfikator linii przejazdu, wartość ta musi być zgodna z wpisem z pliku [shapes.txt](#shapes). Plik shapes.txt pozwala ustalić, jak powinny być rysowane na mapach trasy przejazdu kursów.
+          Pole **shape_id** zawiera unikalny identyfikator trasy przejazdu, wartość ta musi być zgodna z wpisem z pliku [shapes.txt](#shapes). Plik shapes.txt pozwala ustalić, jak powinny być rysowane na mapach trasy przejazdu kursów.
   - field_name: wheelchair_accessible
     details:
       - ID: 9
