@@ -74,6 +74,13 @@ table_data:
         tags: []
         text: |
           The route_text_color field can be used to specify a legible color to use for text drawn against a background of route_color. The color must be provided as a six-character hexadecimal number, for example, FFD700. If no color is specified, the default text color is black (000000).  The color difference between **route_color** and **route_text_color** should provide sufficient contrast when viewed on a black and white screen.
+  - field_name: route_sort_order
+    details:
+      - ID: 10
+        required: false
+        tags: []
+        text: |
+          The **route_sort_order** field can be used to order the routes in a way which is ideal for presentation to customers. It must be a non-negative integer. Routes with smaller **route_sort_order** values should be displayed before routes with larger route_sort_order values.
 ---
 File: **Required**
 
